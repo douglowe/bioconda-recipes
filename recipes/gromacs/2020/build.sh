@@ -49,4 +49,4 @@ chmod a+x ${PREFIX}/bin/gmx
 
 mkdir -p "${PREFIX}/etc/conda/activate.d"
 cp ${RECIPE_DIR}/activate.sh "${PREFIX}/bin/gromacs_activate.sh" 
-ln -s  ../../../bin/gromacs_activate.sh "${PREFIX}/etc/conda/activate.d/gromacs_activate.sh"
+ln -s  ${PREFIX}/bin/gromacs_activate.sh "${PREFIX}/etc/conda/activate.d/gromacs_activate.sh"
