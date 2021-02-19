@@ -59,7 +59,7 @@ chmod +x "${PREFIX}/bin/${gmx}"
 function _gromacs_bin_dir() {
   local arch
   arch='SSE2'
-  case \$( grep -m1 '^flags' ) in
+  case \$( cat /proc/cpuinfo | grep -m1 '^flags' ) in
     *\ avx512f\ *)
       test -d "${PREFIX}/bin.AVX_512" && \
         "${PREFIX}/bin.AVX_512/identifyavx512fmaunits" | grep -q '2' && \
